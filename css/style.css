@@ -1,0 +1,124 @@
+/*
+    1. box-sizing
+     A. The box-sizing CSS property sets how the total width and height of an element is calculated.
+     B. Option value : 
+        1) content-box : 
+            a) This is the inital and default value as specified by the CSS standard.
+            b) The width and height properties does not include the padding, border, or margin.            
+            c) Example : 370px wide.
+                .box {
+                    width: 350px;
+                    border: 10px solid black;                     
+                }
+        2) border-box : 
+            a) The width and height properties include the content, padding, and border, but do not include the margin.
+            b) Do not include the margin.
+            c) Example : 350px wide.
+                .box {
+                    width: 350px;
+                    border: 10px solid black;
+                }                
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+}
+
+body {
+    background-color: #ced3df;
+}
+
+button {
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.list {
+    width: 400px;
+    text-align: center;
+    /* list -> block-level element -> 페이지의 한 줄 차지 -> margin 이 오른쪽에 적용되어 있음 -> 정렬 필요 */
+    margin: auto;
+    background-color: #f1f0f7;
+    border-radius: 20px;
+
+    -webkit-box-shadow: 21px 26px 21px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 21px 26px 21px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 21px 26px 21px -1px rgba(0, 0, 0, 0.75);
+}
+
+.header {
+    height: 48px;
+    padding: 8px;
+    font-size: 24px;
+
+    background: rgb(180, 180, 181);
+    background: linear-gradient(90deg, rgba(180, 180, 181, 1) 0%, rgba(145, 150, 143, 1) 35%, rgba(166, 173, 136, 1) 100%);
+
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+
+.items {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 32px;
+}
+
+.item__delete {
+    font-size: 16px;
+    transition: all 300ms ease-in;
+}
+
+.item__delete:hover {
+    color: tomato;
+    transform: scale(1.1);
+}
+
+.item__divider {
+
+    width: 90%;
+    height: 1px;
+    background-color: darkgray;
+    margin: auto;
+}
+
+
+.footer {
+    background: rgb(180, 180, 181);
+    background: linear-gradient(90deg, rgba(180, 180, 181, 1) 0%, rgba(145, 150, 143, 1) 35%, rgba(166, 173, 136, 1) 100%);
+    border-radius: 0 0 20px 20px;
+}
+
+.footer__input {
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    padding: 0 16px;
+}
+
+.footer__button {
+    width: 48px;
+    height: 48px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    transition: transform 300ms ease-in;
+}
+
+.footer__button:hover {
+    transform: scale(1.1);
+}
